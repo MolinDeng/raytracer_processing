@@ -5,3 +5,4 @@ This is a simple raytracer written in Processing.
 - Phong shading
 - BVH acceleration structure
 - Instancing
+- Self-defined scene file
