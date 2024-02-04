@@ -1,0 +1,329 @@
+# Create a scene that includes many, many instances of one of the large meshes:
+# bunny, buddha, dragon, or lucy.
+# totally 49 lucy instances are created in a 7x7 grid.
+
+fov 125
+
+# blue background
+
+background 0.2 0.2 1
+
+# light sources 
+
+light  3 0  0  .8 .8 .7
+light -3 0  0  .3 .2 .2
+
+# these two triangles acts as a ground plane
+
+surface  .8 .8 .8
+
+begin
+vertex -1000 -1000 -100
+vertex  1000 -1000 -100
+vertex  1000 1000  -100
+end
+
+begin
+vertex  1000 1000  -100
+vertex -1000 1000  -100
+vertex -1000 -1000 -100
+end
+
+# one lucy (named object)
+
+surface  .8 .8 .8
+
+begin_accel
+read lucy_100k.cli
+end_accel
+named_object lucy
+# ====================================== the first row ======================================
+push
+
+translate 0 0 -4
+
+push
+translate -6 0 0
+instance lucy
+pop
+
+push
+translate -4 0 0
+instance lucy
+pop
+
+push
+translate -2 0 0
+instance lucy
+pop
+
+push
+translate 0 0 0
+instance lucy
+pop
+
+push
+translate 2 0 0
+instance lucy
+pop
+
+push
+translate 4 0 0
+instance lucy
+pop
+
+push
+translate 6 0 0
+instance lucy
+pop
+
+pop
+# ====================================== the second row ======================================
+push
+
+translate 0 2 -4
+
+push
+translate -6 0 0
+instance lucy
+pop
+
+push
+translate -4 0 0
+instance lucy
+pop
+
+push
+translate -2 0 0
+instance lucy
+pop
+
+push
+translate 0 0 0
+instance lucy
+pop
+
+push
+translate 2 0 0
+instance lucy
+pop
+
+push
+translate 4 0 0
+instance lucy
+pop
+
+push
+translate 6 0 0
+instance lucy
+pop
+
+pop
+# ====================================== the third row ======================================
+push
+
+translate 0 4 -4
+
+push
+translate -6 0 0
+instance lucy
+pop
+
+push
+translate -4 0 0
+instance lucy
+pop
+
+push
+translate -2 0 0
+instance lucy
+pop
+
+push
+translate 0 0 0
+instance lucy
+pop
+
+push
+translate 2 0 0
+instance lucy
+pop
+
+push
+translate 4 0 0
+instance lucy
+pop
+
+push
+translate 6 0 0
+instance lucy
+pop
+
+pop
+# ====================================== the fourth row ======================================
+push
+
+translate 0 6 -4
+
+push
+translate -6 0 0
+instance lucy
+pop
+
+push
+translate -4 0 0
+instance lucy
+pop
+
+push
+translate -2 0 0
+instance lucy
+pop
+
+push
+translate 0 0 0
+instance lucy
+pop
+
+push
+translate 2 0 0
+instance lucy
+pop
+
+push
+translate 4 0 0
+instance lucy
+pop
+
+push
+translate 6 0 0
+instance lucy
+pop
+
+pop
+# ====================================== the fifth row ======================================
+push
+
+translate 0 -2 -4
+
+push
+translate -6 0 0
+instance lucy
+pop
+
+push
+translate -4 0 0
+instance lucy
+pop
+
+push
+translate -2 0 0
+instance lucy
+pop
+
+push
+translate 0 0 0
+instance lucy
+pop
+
+push
+translate 2 0 0
+instance lucy
+pop
+
+push
+translate 4 0 0
+instance lucy
+pop
+
+push
+translate 6 0 0
+instance lucy
+pop
+
+pop
+# ====================================== the sixth row ======================================
+push
+
+translate 0 -4 -4
+
+push
+translate -6 0 0
+instance lucy
+pop
+
+push
+translate -4 0 0
+instance lucy
+pop
+
+push
+translate -2 0 0
+instance lucy
+pop
+
+push
+translate 0 0 0
+instance lucy
+pop
+
+push
+translate 2 0 0
+instance lucy
+pop
+
+push
+translate 4 0 0
+instance lucy
+pop
+
+push
+translate 6 0 0
+instance lucy
+pop
+
+pop
+# ====================================== the seventh row ======================================
+push
+
+translate 0 -6 -4
+
+push
+translate -6 0 0
+instance lucy
+pop
+
+push
+translate -4 0 0
+instance lucy
+pop
+
+push
+translate -2 0 0
+instance lucy
+pop
+
+push
+translate 0 0 0
+instance lucy
+pop
+
+push
+translate 2 0 0
+instance lucy
+pop
+
+push
+translate 4 0 0
+instance lucy
+pop
+
+push
+translate 6 0 0
+instance lucy
+pop
+
+pop
+render
+
+

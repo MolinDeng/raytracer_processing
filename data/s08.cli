@@ -1,0 +1,42 @@
+# big bunny, in acceleration structure (fast to render)
+
+fov 60
+
+# blue background
+
+background 0.2 0.2 1
+
+# light sources 
+
+light  3 4  0  .8 .8 .8
+light -3 4  0  .2 .2 .2
+
+# these two triangles acts as a ground plane
+
+surface  .8 .8 .8 
+
+begin
+vertex -100 -1 -100
+vertex  100 -1 -100
+vertex  100 -1  100
+end
+
+begin
+vertex  100 -1  100
+vertex -100 -1  100
+vertex -100 -1 -100
+end
+
+# the bunny
+
+translate 0 0 -3
+
+surface  .8 .8 .8
+
+begin_accel
+read bun69k.cli
+end_accel
+
+render
+
+

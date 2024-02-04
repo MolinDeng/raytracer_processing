@@ -1,0 +1,36 @@
+# make a named box and draw three instances of it
+
+fov 60
+light 3 3 5 1 1 1
+background 0.3 0.3 1
+
+# create a named object (a box)
+surface   0.9 0.9 0.9
+box -1 -1 -1  1 1 1
+named_object a_box
+
+# translate an instanced box
+push
+translate 0 2 -7
+instance a_box
+pop
+
+surface   0.9 0.3 0.3
+
+# scale and translate an instanced box
+push
+translate -2 -2 -7
+scale 1.5 0.7 0.7
+instance a_box
+pop
+
+surface   0.3 0.9 0.3
+
+# rotate and translate an instanced box (rotate succeeds)
+push
+translate 2 -2 -7
+rotate 45  1 0 0
+instance a_box
+pop
+
+render

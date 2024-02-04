@@ -1,0 +1,86 @@
+# a test scene with several triangles that are placed in an acceleration structure
+
+fov 60
+light 3 3 5 1 1 1
+background 0.3 0.3 1
+
+surface   0.9 0.3 0.3
+
+# a bunch of triangles
+
+translate 7 4 -16
+
+begin_accel
+
+begin
+vertex -1 -1 0
+vertex  1 -1 0
+vertex  0  1 0
+end
+
+translate -2 -1 -1
+begin
+vertex -1 -1 0
+vertex  1 -1 0
+vertex  0  1 0
+end
+
+translate -2 -1 -1
+begin
+vertex -1 -1 0
+vertex  1 -1 0
+vertex  0  1 0
+end
+
+translate -2 -1 -1
+begin
+vertex -1 -1 0
+vertex  1 -1 0
+vertex  0  1 0
+end
+
+translate -2 -1 -1
+begin
+vertex -1 -1 0
+vertex  1 -1 0
+vertex  0  1 0
+end
+
+translate -2 -1 -1
+begin
+vertex -1 -1 0
+vertex  1 -1 0
+vertex  0  1 0
+end
+
+translate -2 -1 -1
+begin
+vertex -1 -1 0
+vertex  1 -1 0
+vertex  0  1 0
+end
+
+translate -2 -1 -1
+begin
+vertex -1 -1 0
+vertex  1 -1 0
+vertex  0  1 0
+end
+
+translate -2 -1 -1
+begin
+vertex -1 -1 0
+vertex  1 -1 0
+vertex  0  1 0
+end
+
+translate -2 -1 -1
+begin
+vertex -1 -1 0
+vertex  1 -1 0
+vertex  0  1 0
+end
+
+end_accel
+
+render

@@ -1,0 +1,35 @@
+# make a named triangle and draw several instances of it
+
+fov 60
+light 3 3 5 1 1 1
+background 0.3 0.3 1
+
+# create a named triangle
+surface   0.9 0.3 0.3
+begin
+vertex -1 -1 0
+vertex  1 -1 0
+vertex  0  1 0
+end
+named_object my_tri
+
+# create several triangle instances
+
+push
+translate 0 0 -5
+instance my_tri
+pop
+
+push
+translate -2 2 -6
+scale 2 2 2
+instance my_tri
+pop
+
+push
+translate 2 2 -6
+rotate 35  0 0 1
+instance my_tri
+pop
+
+render

@@ -1,0 +1,84 @@
+# draw multiple bunnies
+
+fov 60
+
+# blue background
+
+background 0.2 0.2 1
+
+# light sources 
+
+light  3 4  0  .8 .8 .8
+light -3 4  0  .2 .2 .2
+
+# these two triangles acts as a ground plane
+
+surface  .8 .8 .8
+
+begin
+vertex -100 -1 -100
+vertex  100 -1 -100
+vertex  100 -1  100
+end
+
+begin
+vertex  100 -1  100
+vertex -100 -1  100
+vertex -100 -1 -100
+end
+
+# one bunny (named object)
+
+surface  .8 .8 .8
+
+begin_accel
+read bun69k.cli
+end_accel
+named_object bunny
+
+# now instance the bunny
+
+push
+
+translate 0 0 -14
+
+push
+translate -6 0 0
+instance bunny
+pop
+
+push
+translate -4 0 0
+instance bunny
+pop
+
+push
+translate -2 0 0
+instance bunny
+pop
+
+push
+translate 0 0 0
+instance bunny
+pop
+
+push
+translate 2 0 0
+instance bunny
+pop
+
+push
+translate 4 0 0
+instance bunny
+pop
+
+push
+translate 6 0 0
+instance bunny
+pop
+
+pop
+
+render
+
+
