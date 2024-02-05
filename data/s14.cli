@@ -1,0 +1,66 @@
+# More mesh objects: dragon_xyz, t-rex, t-rex skeleton
+
+fov 80
+
+# blue background
+
+background 0.3 0.3 .9
+
+# light sources 
+
+light -3 4  0  .2 .2 .2
+light  3 4  0  .8 .8 .8
+
+# these two triangles acts as a ground plane
+
+surface  .8 .8 .8
+
+begin
+vertex -100 -1 -100
+vertex  100 -1 -100
+vertex  100 -1  100
+end
+
+begin
+vertex  100 -1  100
+vertex -100 -1  100
+vertex -100 -1 -100
+end
+
+
+surface  .6 .1 .2
+
+push
+translate -1.8 -0.6 -3
+scale 0.01 0.01 0.01
+begin_accel
+read dragon_xyzrgb_90k.cli
+end_accel
+pop
+
+surface  .1 .5 .2
+
+push
+translate -1.8 -1.0 -5
+scale 0.06 0.06 0.06
+rotate 90  0 1 0
+rotate 270  1 0 0
+begin_accel
+read t_rex_85k.cli
+end_accel
+pop
+
+surface  1 1 1
+
+push
+translate 1.2 -1.0 -5
+scale 0.07 0.07 0.07
+rotate -90  0 1 0
+rotate 270  1 0 0
+begin_accel
+read dino_dr_who_200k.cli
+end_accel
+pop
+
+render
+

@@ -1,0 +1,65 @@
+# More mesh objects: totoro, tree, armadillo
+
+fov 80
+
+# blue background
+
+background 0.3 0.3 .9
+
+# light sources 
+
+light  3 4  0  .2 .2 .2
+light -1 2  0  .8 .8 .8
+
+# these two triangles acts as a ground plane
+
+surface  .8 .8 .8
+
+begin
+vertex -100 -1 -100
+vertex  100 -1 -100
+vertex  100 -1  100
+end
+
+begin
+vertex  100 -1  100
+vertex -100 -1  100
+vertex -100 -1 -100
+end
+
+
+surface  .6 .7 .7
+
+push
+translate -1.8 -0.85 -4
+scale 0.022 0.022 0.022
+rotate 270  1 0 0
+begin_accel
+read totoro_200k.cli
+end_accel
+pop
+
+surface  .2 .9 .3
+
+push
+translate 0 -0.2 -4
+scale 0.022 0.022 0.022
+rotate 270  1 0 0
+begin_accel
+read pine_tree_230k.cli
+end_accel
+pop
+
+surface  .7 .3 .1
+
+push
+translate 1.8 -0.2 -4
+scale 0.016 0.016 0.016
+rotate 180  0 1 0
+begin_accel
+read armadillo_138k.cli
+end_accel
+pop
+
+render
+

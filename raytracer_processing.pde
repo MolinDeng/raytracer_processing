@@ -466,6 +466,9 @@ void keyPressed() {
     case '9': interpreter("s09.cli"); break;
     case '0': interpreter("s10.cli"); break;
     case 'a': interpreter("s11.cli"); break;
+    case 'b': interpreter("s12.cli"); break;
+    case 'c': interpreter("s13.cli"); break;
+    case 'd': interpreter("s14.cli"); break;
   }
   lastPressedKey = key;
 }
