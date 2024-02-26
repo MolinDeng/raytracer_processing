@@ -8,7 +8,11 @@ This is a simple raytracer written in Processing.
 
 ## Features
 
-- Phong shading
+- Lambertian shading
 - BVH acceleration structure
 - Instancing
 - Self-defined scene file
+
+## TODO
+
+- SAH-Based BVH
